@@ -17,10 +17,15 @@ const ProductoSchema = Schema({
   },
   precio: { type: Number, default: 0 },
   minimo: { type: Number, default: 0 },
+  categoria: {
+    type: Schema.Types.ObjectId,
+    ref: "Categoria",
+    required: true,
+  },
 });
 
 ProductoSchema.methods.toJSON = function () {
-  const { __v,estado, ...data } = this.toObject();
+  const { __v, estado, ...data } = this.toObject();
   return data;
 };
 

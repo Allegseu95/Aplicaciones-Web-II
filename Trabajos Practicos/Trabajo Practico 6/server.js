@@ -4,16 +4,23 @@ const { dbConnection } = require("./database/config");
 
 class Server {
   constructor() {
-    this.app = express();
+    this.app = express.Router();
+    this.router = express.Router();
+
     this.port = process.env.PORT;
 
     this.paths = {
       productos: "/api/productos",
+      categorias: "/api/categorias",
     };
 
     this.conectarDB();
     this.middlewares();
     this.routes();
+
+    this.router.use("/v1/inventario", this.app);
+
+    this._express = express().use(this.router);
   }
 
   async conectarDB() {
@@ -29,10 +36,11 @@ class Server {
 
   routes() {
     this.app.use(this.paths.productos, require("./routes/producto.routes"));
+    this.app.use(this.paths.categorias, require("./routes/categoria.routes"));
   }
 
   listen() {
-    this.app.listen(this.port, () => {
+    this._express.listen(this.port, () => {
       console.log(`Servidor ejecutando en puerto ${this.port}`);
     });
   }
