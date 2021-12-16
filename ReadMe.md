@@ -17,6 +17,13 @@
   1. Trabajo Complementario 05
 - **Trabajos Practicos**
   1. Docker 1
+  1. Docker 2 (Docker Compose)
+  1. Microservices
+     - microservicios
+      1. book-service
+      1. car-service
+      1. user-service
+     - monolitico
   1. Trabajo Practico 1
   1. Trabajo Practico 2
   1. Trabajo Practico 3
