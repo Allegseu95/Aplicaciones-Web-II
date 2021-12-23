@@ -23,7 +23,7 @@ app.get("api/v1/books", (req, res) => {
   response.data.push(
     "javascript guia definitiva",
     "Patrones JavaScript",
-    "Antipatrones STUPI"
+    "Antipatrones STUPID"
   );
   return res.send(response);
 });
