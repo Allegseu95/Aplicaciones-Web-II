@@ -25,6 +25,7 @@
         1. user-service
       - Monolitico  
   1. Trabajo Practico 1
+  1. Trabajo Practico 1 - Parcial 2
   1. Trabajo Practico 2
   1. Trabajo Practico 3
   1. Trabajo Practico 4
