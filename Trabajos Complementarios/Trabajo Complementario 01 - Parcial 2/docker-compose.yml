@@ -1,0 +1,23 @@
+# indico la version de mi archivo docker-compose
+version: "3"
+# en la seccion de services declaro todos los servicios que creara mi archivo docker-compose
+services:
+  # le doy un nombre mi servicio rest
+  api:
+    # con la instruccion build declaro donde se encuentra la configuracion para la creacion del contenedor de mi api
+    build: .
+    # declaro el nombre del servicio que depende este servicio, en este caso el servicio mongo
+    depends_on:
+      - mongo
+    # declaro mis variables de entorno necesarias para el correcto funcionamiento de mi api
+    environment:
+      - PORT=3000
+      - MONGO_URI=mongodb://mongo:27017/test
+      - APPLICATION_NAME="Tareas Facci "
+    # declaro los puertos de la maquina cliente y el puerto del docker de la api
+    ports:
+      - "3000:3000"
+  # le doy un nombre a mi otro servicio de base de datos mongodb
+  mongo:
+    # declaro las instrucciones necesarias para la creacion del contenedor de mongo, que en este caso simplemente es la imagen de la cual partira para crearse el contenedor
+    image: mongo
