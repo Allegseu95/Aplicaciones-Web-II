@@ -30,6 +30,7 @@
   1. Trabajo Practico 2
   1. Trabajo Practico 2 - Parcial 2
   1. Trabajo Practico 3
+  1. Trabajo Practico 3 - Parcial 2
   1. Trabajo Practico 4
   1. Trabajo Practico 5
   1. Trabajo Practico 6 (API en Capas con CSR)
