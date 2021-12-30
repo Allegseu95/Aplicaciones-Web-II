@@ -14,6 +14,7 @@
   1. Trabajo Complementario 01 - Parcial 2 (Incluye el Trabajo Complementario 02)
   1. Trabajo Complementario 02
   1. Trabajo Complementario 03
+  1. Trabajo Complementario 03 - Parcial 2
   1. Trabajo Complementario 04
   1. Trabajo Complementario 05
 - **Trabajos Practicos**
